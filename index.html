@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Grid Test</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+p {
+    background-color: #eec364;
+    padding: 2em;
+    word-break: break-word;
+}
+
+
+</style>
+
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ====================================================
+
+        Normal
+
+        ===================================================== -->
+
+        <h1>Normal, single size</h1>
+
+        <div class="grid">
+            <div class="grid__col palm--full">
+                <p>palm--full</p>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="grid__col palm--1_2">
+                <p>palm--1_2</p>
+            </div>
+            <div class="grid__col palm--1_2">
+                <p>palm--1_2</p>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="grid__col palm--1_3">
+                <p>palm--1_3</p>
+            </div>
+            <div class="grid__col palm--1_3">
+                <p>palm--1_3</p>
+            </div>
+            <div class="grid__col palm--1_3">
+                <p>palm--1_3</p>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="grid__col palm--1_4">
+                <p>palm--1_4</p>
+            </div>
+            <div class="grid__col palm--1_4">
+                <p>palm--1_4</p>
+            </div>
+            <div class="grid__col palm--1_4">
+                <p>palm--1_4</p>
+            </div>
+            <div class="grid__col palm--1_4">
+                <p>palm--1_4</p>
+            </div>
+        </div>
+
+        <!-- ====================================================
+
+        Change on breakpoints
+
+        ===================================================== -->
+
+        <h1>Change on breakpoints</h1>
+
+        <div class="grid">
+            <div class="grid__col palm--full lap--1_2 desk--3_4">
+                <p>palm--full<br>
+                    lap--1_2<br>
+                    desk--3_4</p>
+            </div>
+            <div class="grid__col palm--full lap--1_2 desk--1_4">
+                <p>palm--full <br>
+                    lap--1_2 <br>
+                    desk--1_4</p>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="grid__col palm--full lap--1_2">
+                <p>palm--full<br>
+                    lap--1_2</p>
+            </div>
+            <div class="grid__col palm--full lap--1_2">
+                <p>palm--full<br>
+                    lap--1_2</p>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="grid__col palm--1_2 lap--1_4">
+                <p>palm--1_2<br>
+                    lap--1_4</p>
+            </div>
+            <div class="grid__col palm--1_2 lap--1_4">
+                <p>palm--1_2<br>
+                    lap--1_4</p>
+            </div>
+            <div class="grid__col palm--1_2 lap--1_4">
+                <p>palm--1_2<br>
+                    lap--1_4</p>
+            </div>
+            <div class="grid__col palm--1_2 lap--1_4">
+                <p>palm--1_2<br>
+                    lap--1_4</p>
+            </div>
+        </div>
+
+        <!-- ====================================================
+
+        Grid sets
+
+        ===================================================== -->
+
+        <h1>Grid Sets</h1>
+
+        <div class="grid grid--set--palm--1_4">
+            <div class="grid__col">
+                <p>grid--set--palm--1_4</p>
+            </div>
+            <div class="grid__col">
+                <p>grid--set--palm--1_4</p>
+            </div>
+            <div class="grid__col">
+                <p>grid--set--palm--1_4</p>
+            </div>
+            <div class="grid__col">
+                <p>grid--set--palm--1_4</p>
+            </div>
+        </div>
+
+        <div class="grid grid--set--palm--1_3">
+            <div class="grid__col">
+                <p>grid--set--palm--1_3</p>
+            </div>
+            <div class="grid__col">
+                <p>grid--set--palm--1_3</p>
+            </div>
+            <div class="grid__col">
+                <p>grid--set--palm--1_3</p>
+            </div>
+        </div>
+
+
+        <div class="grid grid--set--palm--1_2 grid--set--desk--1_4">
+            <div class="grid__col">
+                <p>
+                    grid--set--palm--1_2<br>
+                    grid--set--desk--1_4
+                </p>
+            </div>
+            <div class="grid__col">
+                <p>
+                    grid--set--palm--1_2<br>
+                    grid--set--desk--1_4
+                </p>
+            </div>
+            <div class="grid__col">
+                <p>
+                    grid--set--palm--1_2<br>
+                    grid--set--desk--1_4
+                </p>
+            </div>
+            <div class="grid__col">
+                <p>
+                    grid--set--palm--1_2<br>
+                    grid--set--desk--1_4
+                </p>
+            </div>
+        </div>
+
+
+
+
+        <!-- ====================================================
+
+        Centered
+
+        ===================================================== -->
+
+        <h1>Centered</h1>
+
+
+        <div class="grid">
+            <div class="grid__col palm--1_4 palm--1_4--centered">
+                <p>palm--1_4<br>
+                    palm--1_4--centered</p>
+            </div>
+        </div>
+        <div class="grid">
+            <div class="grid__col palm--1_3 palm--1_3--centered">
+                <p>palm--1_3<br>
+                    palm--1_3--centered</p>
+            </div>
+        </div>
+        <div class="grid">
+            <div class="grid__col palm--1_2 palm--1_2--centered">
+                <p>palm--1_2<br>
+                palm--1_2--centered</p>
+            </div>
+        </div>
+        <div class="grid">
+            <div class="grid__col palm--2_3 palm--2_3--centered">
+                <p>palm--2_3<br>
+                    palm--2_3--centered</p>
+            </div>
+        </div>
+        <div class="grid">
+            <div class="grid__col palm--3_4 palm--3_4--centered">
+                <p>palm--3_4<br>
+                    palm--3_4--centered</p>
+            </div>
+        </div>
+
+
+
+        <h1>Push</h1>
+
+
+        <div class="grid">
+            <div class="grid__col palm--1_4 palm--push--3_4">
+                <p>palm--1_4<br>
+                    palm--push--3_4</p>
+            </div>
+        </div>
+        <div class="grid">
+            <div class="grid__col palm--1_2 palm--push--1_2">
+                <p>palm--1_2<br>
+                    palm--push--1_2</p>
+            </div>
+        </div>
+        <div class="grid">
+            <div class="grid__col palm--2_3 palm--push--1_3">
+                <p>palm--2_3<br>
+                    palm--push--1_3</p>
+            </div>
+        </div>
+        <div class="grid">
+            <div class="grid__col palm--1_2 desk--1_3">
+                <p>palm--1_2<br>
+                    desk--1_3</p>
+            </div>
+            <div class="grid__col palm--1_2 desk--1_3 desk--push--1_3">
+                <p>palm--1_2<br>
+                    desk--1_3<br>
+                    desk--push--1_3</p>
+            </div>
+        </div>
+
+
+        <h1>Nested</h1>
+
+
+        <div class="grid">
+            <div class="grid__col palm--1_2">
+                <div class="grid">
+                    <div class="grid__col palm--1_4">
+                        <p>palm--1_2 > grid__col palm--1_4</p>
+                    </div>
+                    <div class="grid__col palm--1_4">
+                        <p>palm--1_2 > grid__col palm--1_4</p>
+                    </div>
+                    <div class="grid__col palm--1_4">
+                        <p>palm--1_2 > grid__col palm--1_4</p>
+                    </div>
+                    <div class="grid__col palm--1_4">
+                        <p>palm--1_2 > grid__col palm--1_4</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid__col palm--1_2">
+                <div class="grid">
+                    <div class="grid__col palm--1_2">
+                        <p>grid__col palm--1_2</p>
+                    </div>
+                    <div class="grid__col palm--1_2">
+                        <p>grid__col palm--1_2</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+</body>
+</html>
+

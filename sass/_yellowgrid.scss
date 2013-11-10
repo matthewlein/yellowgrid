@@ -1,0 +1,29 @@
+// ********************************************************************* //
+//
+// Grid builder.
+//
+// Requires _proportional-grid.scss
+//
+// ********************************************************************* //
+
+// Imports
+@import 'yellowgrid-config';
+
+// Breakpoint vars
+$bp-lap: 'only screen and (min-width: 500px)';
+$bp-desk: 'only screen and (min-width: 979px)';
+
+
+// Mobile first!
+// Palm-based devices like a mobile phone
+@include grids-init('palm');
+
+//Breakpoint for lap-based devices like tablets, ipads, laptops
+@media #{$bp-lap} {
+    @include grid-setup('lap');
+}
+
+// Breakpoint for desk-based devices like computers or TVs
+@media #{$bp-desk} {
+    @include grid-setup('desk');
+}
