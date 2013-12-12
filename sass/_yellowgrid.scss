@@ -1,24 +1,51 @@
-// ********************************************************************* //
-//
-// Grid builder.
-//
-// Requires _proportional-grid.scss
-//
-// ********************************************************************* //
+/*
+ * Yellowgrid
+ *   author : Matthew Lein
+ *   url : https://github.com/matthewlein/yellowgrid
+ *
+ * Inspired heavily by:
+ *   (starting point)
+ *   Proportional Grids https://github.com/mattberridge/Proportional-Grids/
+ *   (theory and naming)
+ *   CSSWizardry Grids https://github.com/csswizardry/csswizardry-grids
+ */
 
-// Imports
+//-------------------------------------------------------
+// GRID SETTINGS
+//-------------------------------------------------------
+
+// this is the fixed gutter between columns
+$grid-gutter: 18px;
+
+// this sets your class names
+$grid-wrap-class: "grid";
+$grid-col-class: "grid__col";
+
+// number of columns you're using
+$grid-columns: 5;
+// do you want push classes?
+$grid-push : true;
+// do you want centering classes?
+$grid-center : true;
+// do you want grid sets?
+$grid-sets : true;
+
+// Import the builder
 @import 'yellowgrid-config';
+
+// --------------------------------------------------------------------- //
+// RESPONSIVE SETTINGS
+// --------------------------------------------------------------------- //
 
 // Breakpoint vars
 $bp-lap: 'only screen and (min-width: 500px)';
 $bp-desk: 'only screen and (min-width: 979px)';
 
-
-// Mobile first!
+// Mobile first! no breakpoint
 // Palm-based devices like a mobile phone
 @include grids-init('palm');
 
-//Breakpoint for lap-based devices like tablets, ipads, laptops
+// Breakpoint for lap-based devices like tablets, ipads, laptops
 @media #{$bp-lap} {
     @include grid-setup('lap');
 }

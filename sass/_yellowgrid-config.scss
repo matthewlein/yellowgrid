@@ -1,27 +1,20 @@
 /*
- * Bastard of
- * Proportional Grids https://github.com/mattberridge/Proportional-Grids/
- * and CSSWizardry Grids https://github.com/csswizardry/csswizardry-grids
+ * Yellowgrid
+ *   author : Matthew Lein
+ *   url : https://github.com/matthewlein/yellowgrid
  *
- * with patches and additions as needed for me.
+ * Inspired heavily by:
+ *   (starting point)
+ *   Proportional Grids https://github.com/mattberridge/Proportional-Grids/
+ *   (theory and naming)
+ *   CSSWizardry Grids https://github.com/csswizardry/csswizardry-grids
  */
-
-
-//-------------------------------------------------------
-// GRID SETTINGS
-//-------------------------------------------------------
-
-// this is the fixed gutter between columns
-$grid-gutter: 18px;
-
-// this sets your class names
-$grid-wrap-class: "grid";
-$grid-col-class: "grid__col";
 
 //-------------------------------------------------------
 // GRID MIXINS
 //-------------------------------------------------------
 
+// clearfix for $grid-wrap-class
 @mixin clearfix {
     &:after, &:before {
         content: "";
@@ -51,13 +44,12 @@ $grid-col-class: "grid__col";
     .#{$grid-wrap-class} {
         margin-left: -$grid-gutter;
         clear: both;
-        // clearfixed to contain floats
+        // clearfixed to contain the floats
         @include clearfix;
     }
 
     .#{$grid-col-class} {
         float: left;
-        // the gutter between columns
         padding-left: $grid-gutter;
         width: 100%;
         -webkit-box-sizing: border-box;
@@ -65,9 +57,12 @@ $grid-col-class: "grid__col";
         box-sizing: border-box;
     }
 
+    // reverse the order of grid elements
     .#{$grid-wrap-class}--reverse .#{$grid-col-class} {
         float: right;
     }
+
+    // Gutter changes
 
     .#{$grid-wrap-class}--double-gutter {
         @include set-gutter($grid-gutter*2);
@@ -103,165 +98,165 @@ $grid-col-class: "grid__col";
 // $namespace relates to the class prefix e.g. bp2-col to target breakpoint 2
 @mixin grid-setup($namespace) {
 
-    // sets make one whole row all the same width.
-    // use .set-X on the .grid element
+    // grid cols
+    // ------------------------------
+    //
+    // compiled example:
+    //   .palm--1_2 {
+    //       width: 50%;
+    //   }
+
+    // full width
     .#{$namespace},
     .#{$namespace}--1,
-    .#{$namespace}--full,
-    .#{$grid-wrap-class}--set--#{$namespace}--1 .#{$grid-col-class} {
+    .#{$namespace}--full {
         width: 100%;
     }
-    .#{$namespace}--1_2,
-    .#{$grid-wrap-class}--set--#{$namespace}--1_2 .#{$grid-col-class} {
-        width: 50%;
-    }
-    .#{$namespace}--1_3,
-    .#{$grid-wrap-class}--set--#{$namespace}--1_3 .#{$grid-col-class} {
-        width: 33.333%;
-    }
-    .#{$namespace}--1_4,
-    .#{$grid-wrap-class}--set--#{$namespace}--1_4 .#{$grid-col-class} {
-        width: 25%;
-    }
-    .#{$namespace}--1_5,
-    .#{$grid-wrap-class}--set--#{$namespace}--1_5 .#{$grid-col-class} {
-        width: 20%;
-    }
-    .#{$namespace}--2_5 {
-        width: 40%;
-    }
-    .#{$namespace}--3_5 {
-        width: 60%;
-    }
-    .#{$namespace}--4_5 {
-        width: 80%;
-    }
-    .#{$namespace}--2_3 {
-        width: 66.666%;
-    }
-    .#{$namespace}--3_4 {
-        width: 75%;
+
+    // columns setup
+    @for $i from 1 through $grid-columns {
+
+        @for $j from 1 through $grid-columns {
+            // so we don't get 4_2
+            @if $j > $i {
+
+                .#{$namespace}--#{$i}_#{$j} {
+                    width: percentage( $i/$j );
+                }
+
+            }
+
+        }
+
     }
 
-     /*
-     *  item set 'row' clearing
-     *    uses nth child to clear the row
-     *    X in a row, all the same
-     *    widths set above
-     *    ie8 simply gets no clearing for these sets
-     */
+    // grid sets
+    //   sets make all grid columns all the same width.
+    // ------------------------------
+    //
+    // compiled example:
+    //   .grid--set--palm--1_2 .grid__col {
+    //       width: 50%;
+    //   }
+    //
 
-    // rows of 2
-    .#{$grid-wrap-class}--set--#{$namespace}--1_2 .#{$grid-col-class} {
-        &:nth-child(2n+1) {
-            clear: both;
+    @if $grid-sets == true {
+
+        @for $i from 1 through $grid-columns {
+
+            @if $i > 1 {
+
+                .#{$grid-wrap-class}--set--#{$namespace}--1_#{$i} .#{$grid-col-class} {
+                    width: percentage( 1/$i );
+                }
+
+            }
+
         }
-    }
-    // rows of 3
-    .#{$grid-wrap-class}--set--#{$namespace}--1_3 .#{$grid-col-class} {
-        &:nth-child(2n+1) {
-            clear: none;
+
+        // grid set 'row' clearing
+        //   uses nth child to clear the row
+        //   X in a row, all the same
+        //   widths set above
+        //   ie8 simply gets no clearing for these sets
+        //
+        // compiled example:
+        //
+        // .grid--set--palm--1_3 .grid__col:nth-child(3n+1) {
+        //   clear: both;
+        // }
+        // .grid--set--palm--1_3 .grid__col:nth-child(2n+1) {
+        //   clear: none;
+        // }
+        //
+
+        @for $i from 1 through $grid-columns {
+
+            // saves the count for later
+            $count : $i;
+
+            // clear
+            @if $i > 1 {
+
+                .#{$grid-wrap-class}--set--#{$namespace}--1_#{$i} .#{$grid-col-class} {
+                    &:nth-child(#{$i}n+1) {
+                        clear: both;
+                    }
+                }
+
+            }
+            // unclear other ones when using multiple breakpoints
+            @while $count > 2 {
+
+                .#{$grid-wrap-class}--set--#{$namespace}--1_#{$i} .#{$grid-col-class} {
+                    &:nth-child(#{$count - 1}n+1) {
+                        clear: none;
+                    }
+                }
+
+              $count: $count - 1;
+
+            }
+
         }
-        &:nth-child(3n+1) {
-            clear: both;
-        }
-    }
-    // rows of 4
-    .#{$grid-wrap-class}--set--#{$namespace}--1_4 .#{$grid-col-class} {
-        &:nth-child(2n+1) {
-            clear: none;
-        }
-        &:nth-child(3n+1) {
-            clear: none;
-        }
-        &:nth-child(4n+1) {
-            clear: both;
-        }
+
+    // end if
     }
 
-    //Push classes
-    .#{$namespace}--push--0,
-    .#{$namespace}--push--none {
-        position: static;
-        left: 0%;
-    }
-    .#{$namespace}--push--1_2 {
-        position: relative;
-        left: 50%;
-    }
-    .#{$namespace}--push--1_3 {
-        position: relative;
-        left: 33%;
-    }
-    .#{$namespace}--push--1_4 {
-        position: relative;
-        left: 25%;
-    }
-    .#{$namespace}--push--1_5 {
-        position: relative;
-        left: 20%;
-    }
-    .#{$namespace}--push--2_5 {
-        position: relative;
-        left: 40%;
-    }
-    .#{$namespace}--push--3_5 {
-        position: relative;
-        left: 60%;
-    }
-    .#{$namespace}--push--4_5 {
-        position: relative;
-        left: 80%;
-    }
-    .#{$namespace}--push--2_3 {
-        position: relative;
-        left: 66.666%;
-    }
-    .#{$namespace}--push--3_4 {
-        position: relative;
-        left: 75%;
+
+    // Push classes
+    //
+    @if $grid-push == true {
+
+        .#{$namespace}--push--0,
+        .#{$namespace}--push--none {
+            position: static;
+            left: 0%;
+        }
+        // push x columns setup
+        @for $i from 1 through $grid-columns {
+
+            @for $j from 1 through $grid-columns {
+                // so we don't get 4_2
+                @if $j > $i {
+
+                    .#{$namespace}--push--#{$i}_#{$j} {
+                        position : relative;
+                        left: percentage( $i/$j );
+                    }
+
+                }
+
+            }
+
+        }
+    // end if
     }
 
     // Centered classes
     //   extends #{$namespace}-{size}
-    .#{$namespace}--1_2--centered {
-        position: relative;
-        left: 25%;
-    }
-    .#{$namespace}--1_3--centered {
-        position: relative;
-        left: 33.333%;
-    }
-    .#{$namespace}--1_4--centered {
-        position: relative;
-        left: 37.5%;
-    }
-    .#{$namespace}--1_5--centered {
-        position: relative;
-        left: 40%;
-    }
-    .#{$namespace}--2_5--centered {
-        position: relative;
-        left: 30%;
-    }
-    .#{$namespace}--3_5--centered {
-        position: relative;
-        left: 20%;
-    }
-    .#{$namespace}--4_5--centered {
-        position: relative;
-        left: 10%;
-    }
-    .#{$namespace}--2_3--centered {
-        position: relative;
-        left: 16.6665%;
-    }
-    .#{$namespace}--3_4--centered {
-        position: relative;
-        left: 12.5%;
+    //
+    @if $grid-center == true {
+        @for $i from 1 through $grid-columns {
+
+            @for $j from 1 through $grid-columns {
+                // so we don't get 4_2
+                @if $j > $i {
+
+                    .#{$namespace}--#{$i}_#{$j}--centered {
+                        position : relative;
+                        left: percentage( $i/$j );
+                    }
+
+                }
+
+            }
+
+        }
+    // end if
     }
 
-    // Yucky hidden class
+    // hide or show at a breakpoint
     .#{$namespace}--hidden {
         display: none;
     }
@@ -272,93 +267,12 @@ $grid-col-class: "grid__col";
 }
 
 
-// account for no border-box in IE7/6
-@mixin grid-config-oldie {
-
-    .lt-ie8 {
-
-        .#{$grid-wrap-class} {
-            margin-left: 0;
-        }
-
-        .#{$grid-col-class} {
-            padding: 0;
-            margin-left: 5%;
-
-            &:first-child {
-                margin-left: 0;
-            }
-        }
-
-    }
-
-}
-
-// amend widths slightly for IE7/6
-@mixin grid-setup-oldie($namespace) {
-
-    .lt-ie8 {
-        #{$namespace},
-        .#{$namespace}--1,
-        .#{$namespace}--full,
-        #{$grid-wrap-class}--set--#{$namespace}--1 .#{$grid-col-class} {
-            width: 99.95%;
-        }
-        .#{$namespace}--1_2,
-        .#{$grid-wrap-class}--set--#{$namespace}--1_2 .#{$grid-col-class} {
-            width: 47.45%;
-        }
-        .#{$namespace}--1_3,
-        .#{$grid-wrap-class}--set--#{$namespace}--1_3 .#{$grid-col-class} {
-            width: 29.55%;
-        }
-        .#{$namespace}--2_3 {
-            width: 64.95%;
-        }
-        .#{$namespace}--1_4,
-        .#{$grid-wrap-class}--set--#{$namespace}--1_4 .#{$grid-col-class} {
-            width: 19.95%;
-        }
-        .#{$namespace}--3_4 {
-            width: 74.95%;
-        }
-        .#{$namespace}--1_5,
-        .#{$grid-wrap-class}--set--#{$namespace}--1_5 .#{$grid-col-class} {
-            width: 14.95%;
-        }
-        .#{$namespace}--2_5,
-        .#{$grid-wrap-class}--set--#{$namespace}--2_5 .#{$grid-col-class} {
-            width: 34.95%;
-        }
-        .#{$namespace}--3_5,
-        .#{$grid-wrap-class}--set--#{$namespace}--3_5 .#{$grid-col-class} {
-            width: 54.95%;
-        }
-        .#{$namespace}--4_5,
-        .#{$grid-wrap-class}--set--#{$namespace}--4_5 .#{$grid-col-class} {
-            width: 74.95%;
-        }
-    }
-
-}
-
-//-------------------------------------------------------
-// ADDED SUPPORT
-// Mixins to work with http://goo.gl/uwyT6
-//-------------------------------------------------------
-$old-ie: null !default;
-
 // include grids-init to set up your grids with your base class
 // i.e. @include grids-init("col");
 @mixin grids-init($class) {
 
     @include grid-config;
     @include grid-setup($class);
-
-    @if $old-ie {
-        @include grid-config-oldie;
-        @include grid-setup-oldie($class);
-    }
 
 }
 
@@ -367,8 +281,6 @@ $old-ie: null !default;
 
     @include grid-setup($class);
 
-    @if $old-ie {
-        @include grid-setup-oldie($class);
-    }
-
 }
+
+@include grids-init('palm');
