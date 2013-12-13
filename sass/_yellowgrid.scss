@@ -17,18 +17,21 @@
 // this is the fixed gutter between columns
 $grid-gutter: 18px;
 
-// this sets your class names
-$grid-wrap-class: "grid";
-$grid-col-class: "grid__col";
-
-// number of columns you're using
+// number of columns you want
 $grid-columns: 5;
-// do you want push classes?
-$grid-push : true;
-// do you want centering classes?
-$grid-center : true;
+
 // do you want grid sets?
 $grid-sets : true;
+
+// do you want push classes?
+$grid-push : true;
+
+// do you want centering classes?
+$grid-center : true;
+
+// these set your grid and column class names. Not recommended to change, but you can.
+$grid-wrap-class: "grid";
+$grid-col-class: "grid__col";
 
 // Import the builder
 @import 'yellowgrid-builder';
