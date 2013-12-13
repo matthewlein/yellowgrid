@@ -1,0 +1,26 @@
+@import 'yellowgrid';
+
+// Use "inline" breakpoints, for example:
+//
+// h1 {
+//     font-size: 2em;
+//
+//     @include breakpoint('lap') {
+//         font-size: 2.5em;
+//     }
+//
+//     @include breakpoint('desk') {
+//         font-size: 3em;
+//     }
+// }
+//
+// Depends on $bp-{breakpoint} vars in _yellowgrid.scss
+//
+@mixin breakpoint($point) {
+    @if $point == 'lap' {
+        @media #{$bp-lap} { @content; }
+    }
+    @else if $point == 'desk' {
+        @media #{$bp-desk} { @content; }
+    }
+}
