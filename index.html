@@ -8,6 +8,10 @@
 
 <style>
 
+body {
+    margin: 0;
+}
+
 .container {
     max-width: 1200px;
     margin: auto;
@@ -16,10 +20,27 @@
 p {
     background-color: #eec364;
     padding: 2em;
+    margin: 9px 0;
     word-break: break-word;
 }
 h1 {
     text-align: center;
+    margin-top: 0;
+}
+header a {
+    display: block;
+    background-color: #eec364;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+header a:hover {
+    color: #000;
+}
+
+header p {
+    background-color: transparent;
+    padding: 0;
 }
 
 </style>
@@ -29,12 +50,15 @@ h1 {
 
     <div class="container">
 
-
-        <h1>
-            <a href="https://github.com/matthewlein/yellowgrid">
-                Yellowgrid
-            </a>
-        </h1>
+        <header>
+            <h1>
+                <a href="https://github.com/matthewlein/yellowgrid">
+                    Yellowgrid
+                </a>
+            </h1>
+            <p>This is an example using many of the features of Yellowgrid.<br>
+                Keep in mind that breakpoints and number of columns are completely configurable.</p>
+        </header>
 
         <!-- ====================================================
 
