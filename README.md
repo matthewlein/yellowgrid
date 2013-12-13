@@ -11,6 +11,7 @@ Features are:
 - Reversible order
 - Centering columns
 - Pushing columns
+- BEM syntax
 - Made for IE8+, and everyone else.
 
 Inspired heavily by:
