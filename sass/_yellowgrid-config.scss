@@ -10,6 +10,10 @@
  *   CSSWizardry Grids https://github.com/csswizardry/csswizardry-grids
  */
 
+
+// You don't need to touch this file. But you can if you want.
+
+
 //-------------------------------------------------------
 // GRID MIXINS
 //-------------------------------------------------------
@@ -94,12 +98,14 @@
 
 }
 
-// set the proportions you want to use
-// $namespace relates to the class prefix e.g. bp2-col to target breakpoint 2
+// $namespace relates to the class prefix e.g. palm--1_2 to target breakpoint palm
+// $namespace is set in the yellowgrid.scss file with the other config
 @mixin grid-setup($namespace) {
 
-    // grid cols
-    // ------------------------------
+    // --------------------------------------------------------------------- //
+    // Grid columns
+    //   widths for all column combinations
+    // --------------------------------------------------------------------- //
     //
     // compiled example:
     //   .palm--1_2 {
@@ -130,9 +136,11 @@
 
     }
 
+    // --------------------------------------------------------------------- //
     // grid sets
     //   sets make all grid columns all the same width.
-    // ------------------------------
+    //   extends #{$grid-wrap-class}
+    // --------------------------------------------------------------------- //
     //
     // compiled example:
     //   .grid--set--palm--1_2 .grid__col {
@@ -154,12 +162,13 @@
 
         }
 
+        // --------------------------------------------------------------------- //
         // grid set 'row' clearing
         //   uses nth child to clear the row
         //   X in a row, all the same
         //   widths set above
         //   ie8 simply gets no clearing for these sets
-        //
+        // --------------------------------------------------------------------- //
         // compiled example:
         //
         // .grid--set--palm--1_3 .grid__col:nth-child(3n+1) {
@@ -204,7 +213,18 @@
     }
 
 
+    // --------------------------------------------------------------------- //
     // Push classes
+    //   Move a column over by x columns
+    //   extends #{$namespace}-{size}
+    // --------------------------------------------------------------------- //
+    //
+    // compiled example:
+    //
+    // .palm--push--1_2 {
+    //     position: relative;
+    //     left: 50%;
+    // }
     //
     @if $grid-push == true {
 
@@ -233,8 +253,19 @@
     // end if
     }
 
+
+    // --------------------------------------------------------------------- //
     // Centered classes
+    //   centers a column in a grid
     //   extends #{$namespace}-{size}
+    // --------------------------------------------------------------------- //
+    //
+    // compiled example:
+    //
+    // .palm--1_2--centered {
+    //     position: relative;
+    //     left: 50%;
+    // }
     //
     @if $grid-center == true {
         @for $i from 1 through $grid-columns {
@@ -245,7 +276,7 @@
 
                     .#{$namespace}--#{$i}_#{$j}--centered {
                         position : relative;
-                        left: percentage( $i/$j );
+                        left: percentage( ( 1 - $i/$j ) / 2 );
                     }
 
                 }
