@@ -162,6 +162,7 @@
 
         }
 
+
         // --------------------------------------------------------------------- //
         // grid set 'row' clearing
         //   uses nth child to clear the row
@@ -179,37 +180,43 @@
         // }
         //
 
-        @for $i from 1 through $grid-columns {
+        @if $grid-sets-clearing == true {
 
-            // saves the count for later
-            $count : $i;
+            @for $i from 1 through $grid-columns {
 
-            // clear
-            @if $i > 1 {
+                // saves the count for row clearing
+                $count : $i;
 
-                .#{$grid-wrap-class}--set--#{$namespace}--1_#{$i} .#{$grid-col-class} {
-                    &:nth-child(#{$i}n+1) {
-                        clear: both;
+                // unclear other ones when using multiple breakpoints
+                // this must be before the clear both
+                @while $count > 2 {
+
+                    .#{$grid-wrap-class}--set--#{$namespace}--1_#{$i} .#{$grid-col-class} {
+                        &:nth-child(#{$count - 1}n+1) {
+                            clear: none;
+                        }
                     }
+
+                  $count: $count - 1;
+
+                }
+
+                // clear both floats
+                @if $i > 1 {
+
+                    .#{$grid-wrap-class}--set--#{$namespace}--1_#{$i} .#{$grid-col-class} {
+                        &:nth-child(#{$i}n+1) {
+                            clear: both;
+                        }
+                    }
+
                 }
 
             }
-            // unclear other ones when using multiple breakpoints
-            @while $count > 2 {
-
-                .#{$grid-wrap-class}--set--#{$namespace}--1_#{$i} .#{$grid-col-class} {
-                    &:nth-child(#{$count - 1}n+1) {
-                        clear: none;
-                    }
-                }
-
-              $count: $count - 1;
-
-            }
-
+        // end $grid-sets-clearing if
         }
 
-    // end if
+    // end $grid-sets if
     }
 
 
