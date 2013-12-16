@@ -24,7 +24,7 @@ Inspired heavily by:
 
 ## Live demo
 
-[Seeing > Reading](#)
+[Seeing > Reading](http://matthewlein.github.io/yellowgrid/)
 
 ## Basic configuration
 
