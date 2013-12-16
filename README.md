@@ -12,8 +12,10 @@ Features are:
 - Centering columns
 - Pushing columns
 - BEM syntax
-- Made for *IE8+, but mostly everyone else.
-- *IE8 media query support would require a JS solution like [respond.js](https://github.com/scottjehl/Respond)
+- Made for modern browsers, AKA *IE9+
+- *And IE8, mostly:
+    - Media query support requires a JS solution like [respond.js](https://github.com/scottjehl/Respond)
+    - Grid set clearing uses nth-child, so a JS solution like [selectivizr](http://selectivizr.com/) would be required for that feature
 
 Inspired heavily by:
   [Proportional Grids](https://github.com/mattberridge/Proportional-Grids/) (starting point)
