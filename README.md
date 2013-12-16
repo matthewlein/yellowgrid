@@ -1,6 +1,6 @@
 # Yellowgrid
 
-### A mobile-first, responsive, proportional, BEM style grid, with unlimited breakpoints and columns.
+### A mobile-first, responsive, proportional, BEM style, SCSS grid, with unlimited breakpoints and columns.
 
 Features are:
 
@@ -12,6 +12,7 @@ Features are:
 - Centering columns
 - Pushing columns
 - BEM syntax
+- SCSS partials for importing
 - Made for modern browsers, AKA *IE9+
 - *And IE8, mostly:
     - Media query support requires a JS solution like [respond.js](https://github.com/scottjehl/Respond)
