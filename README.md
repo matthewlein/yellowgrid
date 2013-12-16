@@ -5,14 +5,15 @@
 Features are:
 
 - Unlimited number of columns
-- Columns are proportional, which means they are %-based. 1_5 will give you 20%
+- Columns are proportional (%) to their parent
 - Nestable grids
-- Grid sets
+- Grid sets, with auto "row" clearing (IE9+)
 - Reversible order
 - Centering columns
 - Pushing columns
 - BEM syntax
-- Made for IE8+, and everyone else.
+- Made for *IE8+, but mostly everyone else.
+- *IE8 media query support would require a JS solution like [respond.js](https://github.com/scottjehl/Respond)
 
 Inspired heavily by:
   [Proportional Grids](https://github.com/mattberridge/Proportional-Grids/) (starting point)
@@ -35,6 +36,8 @@ $grid-columns: 5;
 
 // do you want grid sets?
 $grid-sets : true;
+// do you want set "rows" to autoclear? (IE9+)
+$grid-sets-clearing : true;
 
 // do you want push classes?
 $grid-push : true;
