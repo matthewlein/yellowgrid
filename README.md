@@ -90,11 +90,14 @@ Set the breakpoint names and definitions as you please. `palm`, `lap`, and `desk
 - `.grid__col` makes a column.
 - `{namespace}--{size}` sets your widths and breakpoint controls.
 
-## Example (compressed) file sizes:
+## Example gzipped file sizes:
 
-  - fully loaded, 3 breakpoints, 5 columns = 7k
-  - fully loaded, 3 breakpoints, 7 columns = 13.5k
-  - bare minimum, 3 breakpoints, 5 columns = 1.7k
+  - fully loaded, 3 breakpoints, 5 columns = 1.7k
+  - fully loaded, 3 breakpoints, 7 columns = 2.6k
+  - fully loaded, 3 breakpoints, 15 columns = 9.3k (down from 151k non-gzipped!)
+  - bare minimum, 3 breakpoints, 5 columns = 0.9k
+
+Due to the incredibly repetitive nature of grid systems, they GZIP wonderfully!
 
 ## Bonus breakpoint @mixin
 
