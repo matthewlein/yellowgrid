@@ -77,8 +77,9 @@ $bp-desk: 'only screen and (min-width: 979px)';
 
 Set the breakpoint names and definitions as you please. `palm`, `lap`, and `desk` are arbitrary names that I like (from @CSSWizardry) to name the breakpoints.
 
-## Default markup
+## Markup Examples
 
+###Regular Grid
 ```
 <div class="grid">
     <div class="grid__col palm--1_2 lap--1_2 desk--1_3">
@@ -89,6 +90,24 @@ Set the breakpoint names and definitions as you please. `palm`, `lap`, and `desk
 - `.grid` wrap anything that you want to be a grid.
 - `.grid__col` makes a column.
 - `{namespace}--{size}` sets your widths and breakpoint controls.
+
+###Grid sets
+
+Grid sets are a set of equal sized columns, with automatic row flow clearing. Nice when everything is the same, like product lists.
+```
+<div class="grid grid--set grid--set--palm--1_2 grid--set--lap--1_3">
+    <div class="grid__col">
+        amazing content
+    </div>
+    <div class="grid__col">
+        amazing content
+    </div>
+    <div class="grid__col">
+        amazing content
+    </div>
+    ...
+</div>
+```
 
 ## Example gzipped file sizes:
 
