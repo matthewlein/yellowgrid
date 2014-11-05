@@ -95,7 +95,7 @@ Set the breakpoint names and definitions as you please. `palm`, `lap`, and `desk
 
 Grid sets are a set of equal sized columns, with automatic row flow clearing. Nice when everything is the same, like product lists.
 ```
-<div class="grid grid--set grid--set--palm--1_2 grid--set--lap--1_3">
+<div class="grid grid--set--palm--1_2 grid--set--lap--1_3">
     <div class="grid__col">
         amazing content
     </div>
