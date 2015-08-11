@@ -20,26 +20,21 @@
  *   (theory and naming)
  *   CSSWizardry Grids https://github.com/csswizardry/csswizardry-grids
  */
-/* line 48, ../sass/_yellowgrid-builder.scss */
 .grid {
   margin-left: -20px;
   clear: both;
 }
-/* line 23, ../sass/_yellowgrid-builder.scss */
 .grid:after, .grid:before {
   content: "";
   display: table;
 }
-/* line 27, ../sass/_yellowgrid-builder.scss */
 .grid:after {
   clear: both;
 }
-/* line 30, ../sass/_yellowgrid-builder.scss */
 .grid {
   *zoom: 1;
 }
 
-/* line 55, ../sass/_yellowgrid-builder.scss */
 .grid__col {
   float: left;
   padding-left: 20px;
@@ -50,1607 +45,1568 @@
   box-sizing: border-box;
 }
 
-/* line 67, ../sass/_yellowgrid-builder.scss */
 .grid--reverse .grid__col {
   float: right;
 }
 
-/* line 73, ../sass/_yellowgrid-builder.scss */
 .grid--double-gutter {
   margin-left: -40px;
 }
-/* line 40, ../sass/_yellowgrid-builder.scss */
 .grid--double-gutter .grid__col {
   padding-left: 40px;
 }
 
-/* line 77, ../sass/_yellowgrid-builder.scss */
 .grid--half-gutter {
   margin-left: -10px;
 }
-/* line 40, ../sass/_yellowgrid-builder.scss */
 .grid--half-gutter .grid__col {
   padding-left: 10px;
 }
 
-/* line 81, ../sass/_yellowgrid-builder.scss */
 .grid--no-gutter {
   margin-left: 0;
 }
-/* line 40, ../sass/_yellowgrid-builder.scss */
 .grid--no-gutter .grid__col {
   padding-left: 0;
 }
 
-/* line 85, ../sass/_yellowgrid-builder.scss */
 .grid--reset-gutter {
   margin-left: -20px;
 }
-/* line 40, ../sass/_yellowgrid-builder.scss */
 .grid--reset-gutter .grid__col {
   padding-left: 20px;
 }
 
-/* line 90, ../sass/_yellowgrid-builder.scss */
 ul.grid,
 ol.grid {
   padding-left: 0;
   list-style: none;
 }
 
-/* line 96, ../sass/_yellowgrid-builder.scss */
 li.grid__col {
   margin-left: 0;
   margin-bottom: 0;
 }
 
-/* line 118, ../sass/_yellowgrid-builder.scss */
 .palm,
 .palm--1,
 .palm--full {
   width: 100%;
 }
 
-/* line 131, ../sass/_yellowgrid-builder.scss */
 .palm--1_2 {
   width: 50%;
 }
 
-/* line 131, ../sass/_yellowgrid-builder.scss */
 .palm--1_3 {
   width: 33.33333%;
 }
 
-/* line 131, ../sass/_yellowgrid-builder.scss */
 .palm--1_4 {
   width: 25%;
 }
 
-/* line 131, ../sass/_yellowgrid-builder.scss */
 .palm--1_5 {
   width: 20%;
 }
 
-/* line 131, ../sass/_yellowgrid-builder.scss */
 .palm--1_6 {
   width: 16.66667%;
 }
 
-/* line 131, ../sass/_yellowgrid-builder.scss */
 .palm--1_7 {
   width: 14.28571%;
 }
 
-/* line 131, ../sass/_yellowgrid-builder.scss */
 .palm--2_3 {
   width: 66.66667%;
 }
 
-/* line 131, ../sass/_yellowgrid-builder.scss */
 .palm--2_4 {
   width: 50%;
 }
 
-/* line 131, ../sass/_yellowgrid-builder.scss */
 .palm--2_5 {
   width: 40%;
 }
 
-/* line 131, ../sass/_yellowgrid-builder.scss */
 .palm--2_6 {
   width: 33.33333%;
 }
 
-/* line 131, ../sass/_yellowgrid-builder.scss */
 .palm--2_7 {
   width: 28.57143%;
 }
 
-/* line 131, ../sass/_yellowgrid-builder.scss */
 .palm--3_4 {
   width: 75%;
 }
 
-/* line 131, ../sass/_yellowgrid-builder.scss */
 .palm--3_5 {
   width: 60%;
 }
 
-/* line 131, ../sass/_yellowgrid-builder.scss */
 .palm--3_6 {
   width: 50%;
 }
 
-/* line 131, ../sass/_yellowgrid-builder.scss */
 .palm--3_7 {
   width: 42.85714%;
 }
 
-/* line 131, ../sass/_yellowgrid-builder.scss */
 .palm--4_5 {
   width: 80%;
 }
 
-/* line 131, ../sass/_yellowgrid-builder.scss */
 .palm--4_6 {
   width: 66.66667%;
 }
 
-/* line 131, ../sass/_yellowgrid-builder.scss */
 .palm--4_7 {
   width: 57.14286%;
 }
 
-/* line 131, ../sass/_yellowgrid-builder.scss */
 .palm--5_6 {
   width: 83.33333%;
 }
 
-/* line 131, ../sass/_yellowgrid-builder.scss */
 .palm--5_7 {
   width: 71.42857%;
 }
 
-/* line 131, ../sass/_yellowgrid-builder.scss */
 .palm--6_7 {
   width: 85.71429%;
 }
 
-/* line 159, ../sass/_yellowgrid-builder.scss */
 .grid--set--palm--1_2 .grid__col {
   width: 50%;
 }
 
-/* line 159, ../sass/_yellowgrid-builder.scss */
 .grid--set--palm--1_3 .grid__col {
   width: 33.33333%;
 }
 
-/* line 159, ../sass/_yellowgrid-builder.scss */
 .grid--set--palm--1_4 .grid__col {
   width: 25%;
 }
 
-/* line 159, ../sass/_yellowgrid-builder.scss */
 .grid--set--palm--1_5 .grid__col {
   width: 20%;
 }
 
-/* line 159, ../sass/_yellowgrid-builder.scss */
 .grid--set--palm--1_6 .grid__col {
   width: 16.66667%;
 }
 
-/* line 159, ../sass/_yellowgrid-builder.scss */
 .grid--set--palm--1_7 .grid__col {
   width: 14.28571%;
 }
 
-/* line 210, ../sass/_yellowgrid-builder.scss */
 .grid--set--palm--1_2 .grid__col:nth-child(2n+1) {
   clear: both;
 }
 
-/* line 197, ../sass/_yellowgrid-builder.scss */
+.palm--1_2:nth-child(2n+1) {
+  clear: both;
+}
+
 .grid--set--palm--1_3 .grid__col:nth-child(2n+1) {
   clear: none;
 }
 
-/* line 210, ../sass/_yellowgrid-builder.scss */
+.palm--1_3:nth-child(2n+1) {
+  clear: none;
+}
+
 .grid--set--palm--1_3 .grid__col:nth-child(3n+1) {
   clear: both;
 }
 
-/* line 197, ../sass/_yellowgrid-builder.scss */
+.palm--1_3:nth-child(3n+1) {
+  clear: both;
+}
+
 .grid--set--palm--1_4 .grid__col:nth-child(3n+1) {
   clear: none;
 }
 
-/* line 197, ../sass/_yellowgrid-builder.scss */
+.palm--1_4:nth-child(3n+1) {
+  clear: none;
+}
+
 .grid--set--palm--1_4 .grid__col:nth-child(2n+1) {
   clear: none;
 }
 
-/* line 210, ../sass/_yellowgrid-builder.scss */
+.palm--1_4:nth-child(2n+1) {
+  clear: none;
+}
+
 .grid--set--palm--1_4 .grid__col:nth-child(4n+1) {
   clear: both;
 }
 
-/* line 197, ../sass/_yellowgrid-builder.scss */
+.palm--1_4:nth-child(4n+1) {
+  clear: both;
+}
+
 .grid--set--palm--1_5 .grid__col:nth-child(4n+1) {
   clear: none;
 }
 
-/* line 197, ../sass/_yellowgrid-builder.scss */
+.palm--1_5:nth-child(4n+1) {
+  clear: none;
+}
+
 .grid--set--palm--1_5 .grid__col:nth-child(3n+1) {
   clear: none;
 }
 
-/* line 197, ../sass/_yellowgrid-builder.scss */
+.palm--1_5:nth-child(3n+1) {
+  clear: none;
+}
+
 .grid--set--palm--1_5 .grid__col:nth-child(2n+1) {
   clear: none;
 }
 
-/* line 210, ../sass/_yellowgrid-builder.scss */
+.palm--1_5:nth-child(2n+1) {
+  clear: none;
+}
+
 .grid--set--palm--1_5 .grid__col:nth-child(5n+1) {
   clear: both;
 }
 
-/* line 197, ../sass/_yellowgrid-builder.scss */
+.palm--1_5:nth-child(5n+1) {
+  clear: both;
+}
+
 .grid--set--palm--1_6 .grid__col:nth-child(5n+1) {
   clear: none;
 }
 
-/* line 197, ../sass/_yellowgrid-builder.scss */
+.palm--1_6:nth-child(5n+1) {
+  clear: none;
+}
+
 .grid--set--palm--1_6 .grid__col:nth-child(4n+1) {
   clear: none;
 }
 
-/* line 197, ../sass/_yellowgrid-builder.scss */
+.palm--1_6:nth-child(4n+1) {
+  clear: none;
+}
+
 .grid--set--palm--1_6 .grid__col:nth-child(3n+1) {
   clear: none;
 }
 
-/* line 197, ../sass/_yellowgrid-builder.scss */
+.palm--1_6:nth-child(3n+1) {
+  clear: none;
+}
+
 .grid--set--palm--1_6 .grid__col:nth-child(2n+1) {
   clear: none;
 }
 
-/* line 210, ../sass/_yellowgrid-builder.scss */
+.palm--1_6:nth-child(2n+1) {
+  clear: none;
+}
+
 .grid--set--palm--1_6 .grid__col:nth-child(6n+1) {
   clear: both;
 }
 
-/* line 197, ../sass/_yellowgrid-builder.scss */
+.palm--1_6:nth-child(6n+1) {
+  clear: both;
+}
+
 .grid--set--palm--1_7 .grid__col:nth-child(6n+1) {
   clear: none;
 }
 
-/* line 197, ../sass/_yellowgrid-builder.scss */
+.palm--1_7:nth-child(6n+1) {
+  clear: none;
+}
+
 .grid--set--palm--1_7 .grid__col:nth-child(5n+1) {
   clear: none;
 }
 
-/* line 197, ../sass/_yellowgrid-builder.scss */
+.palm--1_7:nth-child(5n+1) {
+  clear: none;
+}
+
 .grid--set--palm--1_7 .grid__col:nth-child(4n+1) {
   clear: none;
 }
 
-/* line 197, ../sass/_yellowgrid-builder.scss */
+.palm--1_7:nth-child(4n+1) {
+  clear: none;
+}
+
 .grid--set--palm--1_7 .grid__col:nth-child(3n+1) {
   clear: none;
 }
 
-/* line 197, ../sass/_yellowgrid-builder.scss */
+.palm--1_7:nth-child(3n+1) {
+  clear: none;
+}
+
 .grid--set--palm--1_7 .grid__col:nth-child(2n+1) {
   clear: none;
 }
 
-/* line 210, ../sass/_yellowgrid-builder.scss */
+.palm--1_7:nth-child(2n+1) {
+  clear: none;
+}
+
 .grid--set--palm--1_7 .grid__col:nth-child(7n+1) {
   clear: both;
 }
 
-/* line 240, ../sass/_yellowgrid-builder.scss */
+.palm--1_7:nth-child(7n+1) {
+  clear: both;
+}
+
 .palm--push--0,
 .palm--push--none {
   position: static;
   left: 0%;
 }
 
-/* line 252, ../sass/_yellowgrid-builder.scss */
 .palm--push--1_2 {
   position: relative;
   left: 50%;
 }
 
-/* line 252, ../sass/_yellowgrid-builder.scss */
 .palm--push--1_3 {
   position: relative;
   left: 33.33333%;
 }
 
-/* line 252, ../sass/_yellowgrid-builder.scss */
 .palm--push--1_4 {
   position: relative;
   left: 25%;
 }
 
-/* line 252, ../sass/_yellowgrid-builder.scss */
 .palm--push--1_5 {
   position: relative;
   left: 20%;
 }
 
-/* line 252, ../sass/_yellowgrid-builder.scss */
 .palm--push--1_6 {
   position: relative;
   left: 16.66667%;
 }
 
-/* line 252, ../sass/_yellowgrid-builder.scss */
 .palm--push--1_7 {
   position: relative;
   left: 14.28571%;
 }
 
-/* line 252, ../sass/_yellowgrid-builder.scss */
 .palm--push--2_3 {
   position: relative;
   left: 66.66667%;
 }
 
-/* line 252, ../sass/_yellowgrid-builder.scss */
 .palm--push--2_4 {
   position: relative;
   left: 50%;
 }
 
-/* line 252, ../sass/_yellowgrid-builder.scss */
 .palm--push--2_5 {
   position: relative;
   left: 40%;
 }
 
-/* line 252, ../sass/_yellowgrid-builder.scss */
 .palm--push--2_6 {
   position: relative;
   left: 33.33333%;
 }
 
-/* line 252, ../sass/_yellowgrid-builder.scss */
 .palm--push--2_7 {
   position: relative;
   left: 28.57143%;
 }
 
-/* line 252, ../sass/_yellowgrid-builder.scss */
 .palm--push--3_4 {
   position: relative;
   left: 75%;
 }
 
-/* line 252, ../sass/_yellowgrid-builder.scss */
 .palm--push--3_5 {
   position: relative;
   left: 60%;
 }
 
-/* line 252, ../sass/_yellowgrid-builder.scss */
 .palm--push--3_6 {
   position: relative;
   left: 50%;
 }
 
-/* line 252, ../sass/_yellowgrid-builder.scss */
 .palm--push--3_7 {
   position: relative;
   left: 42.85714%;
 }
 
-/* line 252, ../sass/_yellowgrid-builder.scss */
 .palm--push--4_5 {
   position: relative;
   left: 80%;
 }
 
-/* line 252, ../sass/_yellowgrid-builder.scss */
 .palm--push--4_6 {
   position: relative;
   left: 66.66667%;
 }
 
-/* line 252, ../sass/_yellowgrid-builder.scss */
 .palm--push--4_7 {
   position: relative;
   left: 57.14286%;
 }
 
-/* line 252, ../sass/_yellowgrid-builder.scss */
 .palm--push--5_6 {
   position: relative;
   left: 83.33333%;
 }
 
-/* line 252, ../sass/_yellowgrid-builder.scss */
 .palm--push--5_7 {
   position: relative;
   left: 71.42857%;
 }
 
-/* line 252, ../sass/_yellowgrid-builder.scss */
 .palm--push--6_7 {
   position: relative;
   left: 85.71429%;
 }
 
-/* line 286, ../sass/_yellowgrid-builder.scss */
 .palm--1_2--centered {
   position: relative;
   left: 25%;
 }
 
-/* line 286, ../sass/_yellowgrid-builder.scss */
 .palm--1_3--centered {
   position: relative;
   left: 33.33333%;
 }
 
-/* line 286, ../sass/_yellowgrid-builder.scss */
 .palm--1_4--centered {
   position: relative;
   left: 37.5%;
 }
 
-/* line 286, ../sass/_yellowgrid-builder.scss */
 .palm--1_5--centered {
   position: relative;
   left: 40%;
 }
 
-/* line 286, ../sass/_yellowgrid-builder.scss */
 .palm--1_6--centered {
   position: relative;
   left: 41.66667%;
 }
 
-/* line 286, ../sass/_yellowgrid-builder.scss */
 .palm--1_7--centered {
   position: relative;
   left: 42.85714%;
 }
 
-/* line 286, ../sass/_yellowgrid-builder.scss */
 .palm--2_3--centered {
   position: relative;
   left: 16.66667%;
 }
 
-/* line 286, ../sass/_yellowgrid-builder.scss */
 .palm--2_4--centered {
   position: relative;
   left: 25%;
 }
 
-/* line 286, ../sass/_yellowgrid-builder.scss */
 .palm--2_5--centered {
   position: relative;
   left: 30%;
 }
 
-/* line 286, ../sass/_yellowgrid-builder.scss */
 .palm--2_6--centered {
   position: relative;
   left: 33.33333%;
 }
 
-/* line 286, ../sass/_yellowgrid-builder.scss */
 .palm--2_7--centered {
   position: relative;
   left: 35.71429%;
 }
 
-/* line 286, ../sass/_yellowgrid-builder.scss */
 .palm--3_4--centered {
   position: relative;
   left: 12.5%;
 }
 
-/* line 286, ../sass/_yellowgrid-builder.scss */
 .palm--3_5--centered {
   position: relative;
   left: 20%;
 }
 
-/* line 286, ../sass/_yellowgrid-builder.scss */
 .palm--3_6--centered {
   position: relative;
   left: 25%;
 }
 
-/* line 286, ../sass/_yellowgrid-builder.scss */
 .palm--3_7--centered {
   position: relative;
   left: 28.57143%;
 }
 
-/* line 286, ../sass/_yellowgrid-builder.scss */
 .palm--4_5--centered {
   position: relative;
   left: 10.0%;
 }
 
-/* line 286, ../sass/_yellowgrid-builder.scss */
 .palm--4_6--centered {
   position: relative;
   left: 16.66667%;
 }
 
-/* line 286, ../sass/_yellowgrid-builder.scss */
 .palm--4_7--centered {
   position: relative;
   left: 21.42857%;
 }
 
-/* line 286, ../sass/_yellowgrid-builder.scss */
 .palm--5_6--centered {
   position: relative;
   left: 8.33333%;
 }
 
-/* line 286, ../sass/_yellowgrid-builder.scss */
 .palm--5_7--centered {
   position: relative;
   left: 14.28571%;
 }
 
-/* line 286, ../sass/_yellowgrid-builder.scss */
 .palm--6_7--centered {
   position: relative;
   left: 7.14286%;
 }
 
-/* line 300, ../sass/_yellowgrid-builder.scss */
 .palm--hidden {
   display: none;
 }
 
-/* line 303, ../sass/_yellowgrid-builder.scss */
 .palm--visible {
   display: block;
 }
 
 @media only screen and (min-width: 500px) {
-  /* line 118, ../sass/_yellowgrid-builder.scss */
   .lap,
   .lap--1,
   .lap--full {
     width: 100%;
   }
 
-  /* line 131, ../sass/_yellowgrid-builder.scss */
   .lap--1_2 {
     width: 50%;
   }
 
-  /* line 131, ../sass/_yellowgrid-builder.scss */
   .lap--1_3 {
     width: 33.33333%;
   }
 
-  /* line 131, ../sass/_yellowgrid-builder.scss */
   .lap--1_4 {
     width: 25%;
   }
 
-  /* line 131, ../sass/_yellowgrid-builder.scss */
   .lap--1_5 {
     width: 20%;
   }
 
-  /* line 131, ../sass/_yellowgrid-builder.scss */
   .lap--1_6 {
     width: 16.66667%;
   }
 
-  /* line 131, ../sass/_yellowgrid-builder.scss */
   .lap--1_7 {
     width: 14.28571%;
   }
 
-  /* line 131, ../sass/_yellowgrid-builder.scss */
   .lap--2_3 {
     width: 66.66667%;
   }
 
-  /* line 131, ../sass/_yellowgrid-builder.scss */
   .lap--2_4 {
     width: 50%;
   }
 
-  /* line 131, ../sass/_yellowgrid-builder.scss */
   .lap--2_5 {
     width: 40%;
   }
 
-  /* line 131, ../sass/_yellowgrid-builder.scss */
   .lap--2_6 {
     width: 33.33333%;
   }
 
-  /* line 131, ../sass/_yellowgrid-builder.scss */
   .lap--2_7 {
     width: 28.57143%;
   }
 
-  /* line 131, ../sass/_yellowgrid-builder.scss */
   .lap--3_4 {
     width: 75%;
   }
 
-  /* line 131, ../sass/_yellowgrid-builder.scss */
   .lap--3_5 {
     width: 60%;
   }
 
-  /* line 131, ../sass/_yellowgrid-builder.scss */
   .lap--3_6 {
     width: 50%;
   }
 
-  /* line 131, ../sass/_yellowgrid-builder.scss */
   .lap--3_7 {
     width: 42.85714%;
   }
 
-  /* line 131, ../sass/_yellowgrid-builder.scss */
   .lap--4_5 {
     width: 80%;
   }
 
-  /* line 131, ../sass/_yellowgrid-builder.scss */
   .lap--4_6 {
     width: 66.66667%;
   }
 
-  /* line 131, ../sass/_yellowgrid-builder.scss */
   .lap--4_7 {
     width: 57.14286%;
   }
 
-  /* line 131, ../sass/_yellowgrid-builder.scss */
   .lap--5_6 {
     width: 83.33333%;
   }
 
-  /* line 131, ../sass/_yellowgrid-builder.scss */
   .lap--5_7 {
     width: 71.42857%;
   }
 
-  /* line 131, ../sass/_yellowgrid-builder.scss */
   .lap--6_7 {
     width: 85.71429%;
   }
 
-  /* line 159, ../sass/_yellowgrid-builder.scss */
   .grid--set--lap--1_2 .grid__col {
     width: 50%;
   }
 
-  /* line 159, ../sass/_yellowgrid-builder.scss */
   .grid--set--lap--1_3 .grid__col {
     width: 33.33333%;
   }
 
-  /* line 159, ../sass/_yellowgrid-builder.scss */
   .grid--set--lap--1_4 .grid__col {
     width: 25%;
   }
 
-  /* line 159, ../sass/_yellowgrid-builder.scss */
   .grid--set--lap--1_5 .grid__col {
     width: 20%;
   }
 
-  /* line 159, ../sass/_yellowgrid-builder.scss */
   .grid--set--lap--1_6 .grid__col {
     width: 16.66667%;
   }
 
-  /* line 159, ../sass/_yellowgrid-builder.scss */
   .grid--set--lap--1_7 .grid__col {
     width: 14.28571%;
   }
 
-  /* line 210, ../sass/_yellowgrid-builder.scss */
   .grid--set--lap--1_2 .grid__col:nth-child(2n+1) {
     clear: both;
   }
 
-  /* line 197, ../sass/_yellowgrid-builder.scss */
+  .lap--1_2:nth-child(2n+1) {
+    clear: both;
+  }
+
   .grid--set--lap--1_3 .grid__col:nth-child(2n+1) {
     clear: none;
   }
 
-  /* line 210, ../sass/_yellowgrid-builder.scss */
+  .lap--1_3:nth-child(2n+1) {
+    clear: none;
+  }
+
   .grid--set--lap--1_3 .grid__col:nth-child(3n+1) {
     clear: both;
   }
 
-  /* line 197, ../sass/_yellowgrid-builder.scss */
+  .lap--1_3:nth-child(3n+1) {
+    clear: both;
+  }
+
   .grid--set--lap--1_4 .grid__col:nth-child(3n+1) {
     clear: none;
   }
 
-  /* line 197, ../sass/_yellowgrid-builder.scss */
+  .lap--1_4:nth-child(3n+1) {
+    clear: none;
+  }
+
   .grid--set--lap--1_4 .grid__col:nth-child(2n+1) {
     clear: none;
   }
 
-  /* line 210, ../sass/_yellowgrid-builder.scss */
+  .lap--1_4:nth-child(2n+1) {
+    clear: none;
+  }
+
   .grid--set--lap--1_4 .grid__col:nth-child(4n+1) {
     clear: both;
   }
 
-  /* line 197, ../sass/_yellowgrid-builder.scss */
+  .lap--1_4:nth-child(4n+1) {
+    clear: both;
+  }
+
   .grid--set--lap--1_5 .grid__col:nth-child(4n+1) {
     clear: none;
   }
 
-  /* line 197, ../sass/_yellowgrid-builder.scss */
+  .lap--1_5:nth-child(4n+1) {
+    clear: none;
+  }
+
   .grid--set--lap--1_5 .grid__col:nth-child(3n+1) {
     clear: none;
   }
 
-  /* line 197, ../sass/_yellowgrid-builder.scss */
+  .lap--1_5:nth-child(3n+1) {
+    clear: none;
+  }
+
   .grid--set--lap--1_5 .grid__col:nth-child(2n+1) {
     clear: none;
   }
 
-  /* line 210, ../sass/_yellowgrid-builder.scss */
+  .lap--1_5:nth-child(2n+1) {
+    clear: none;
+  }
+
   .grid--set--lap--1_5 .grid__col:nth-child(5n+1) {
     clear: both;
   }
 
-  /* line 197, ../sass/_yellowgrid-builder.scss */
+  .lap--1_5:nth-child(5n+1) {
+    clear: both;
+  }
+
   .grid--set--lap--1_6 .grid__col:nth-child(5n+1) {
     clear: none;
   }
 
-  /* line 197, ../sass/_yellowgrid-builder.scss */
+  .lap--1_6:nth-child(5n+1) {
+    clear: none;
+  }
+
   .grid--set--lap--1_6 .grid__col:nth-child(4n+1) {
     clear: none;
   }
 
-  /* line 197, ../sass/_yellowgrid-builder.scss */
+  .lap--1_6:nth-child(4n+1) {
+    clear: none;
+  }
+
   .grid--set--lap--1_6 .grid__col:nth-child(3n+1) {
     clear: none;
   }
 
-  /* line 197, ../sass/_yellowgrid-builder.scss */
+  .lap--1_6:nth-child(3n+1) {
+    clear: none;
+  }
+
   .grid--set--lap--1_6 .grid__col:nth-child(2n+1) {
     clear: none;
   }
 
-  /* line 210, ../sass/_yellowgrid-builder.scss */
+  .lap--1_6:nth-child(2n+1) {
+    clear: none;
+  }
+
   .grid--set--lap--1_6 .grid__col:nth-child(6n+1) {
     clear: both;
   }
 
-  /* line 197, ../sass/_yellowgrid-builder.scss */
+  .lap--1_6:nth-child(6n+1) {
+    clear: both;
+  }
+
   .grid--set--lap--1_7 .grid__col:nth-child(6n+1) {
     clear: none;
   }
 
-  /* line 197, ../sass/_yellowgrid-builder.scss */
+  .lap--1_7:nth-child(6n+1) {
+    clear: none;
+  }
+
   .grid--set--lap--1_7 .grid__col:nth-child(5n+1) {
     clear: none;
   }
 
-  /* line 197, ../sass/_yellowgrid-builder.scss */
+  .lap--1_7:nth-child(5n+1) {
+    clear: none;
+  }
+
   .grid--set--lap--1_7 .grid__col:nth-child(4n+1) {
     clear: none;
   }
 
-  /* line 197, ../sass/_yellowgrid-builder.scss */
+  .lap--1_7:nth-child(4n+1) {
+    clear: none;
+  }
+
   .grid--set--lap--1_7 .grid__col:nth-child(3n+1) {
     clear: none;
   }
 
-  /* line 197, ../sass/_yellowgrid-builder.scss */
+  .lap--1_7:nth-child(3n+1) {
+    clear: none;
+  }
+
   .grid--set--lap--1_7 .grid__col:nth-child(2n+1) {
     clear: none;
   }
 
-  /* line 210, ../sass/_yellowgrid-builder.scss */
+  .lap--1_7:nth-child(2n+1) {
+    clear: none;
+  }
+
   .grid--set--lap--1_7 .grid__col:nth-child(7n+1) {
     clear: both;
   }
 
-  /* line 240, ../sass/_yellowgrid-builder.scss */
+  .lap--1_7:nth-child(7n+1) {
+    clear: both;
+  }
+
   .lap--push--0,
   .lap--push--none {
     position: static;
     left: 0%;
   }
 
-  /* line 252, ../sass/_yellowgrid-builder.scss */
   .lap--push--1_2 {
     position: relative;
     left: 50%;
   }
 
-  /* line 252, ../sass/_yellowgrid-builder.scss */
   .lap--push--1_3 {
     position: relative;
     left: 33.33333%;
   }
 
-  /* line 252, ../sass/_yellowgrid-builder.scss */
   .lap--push--1_4 {
     position: relative;
     left: 25%;
   }
 
-  /* line 252, ../sass/_yellowgrid-builder.scss */
   .lap--push--1_5 {
     position: relative;
     left: 20%;
   }
 
-  /* line 252, ../sass/_yellowgrid-builder.scss */
   .lap--push--1_6 {
     position: relative;
     left: 16.66667%;
   }
 
-  /* line 252, ../sass/_yellowgrid-builder.scss */
   .lap--push--1_7 {
     position: relative;
     left: 14.28571%;
   }
 
-  /* line 252, ../sass/_yellowgrid-builder.scss */
   .lap--push--2_3 {
     position: relative;
     left: 66.66667%;
   }
 
-  /* line 252, ../sass/_yellowgrid-builder.scss */
   .lap--push--2_4 {
     position: relative;
     left: 50%;
   }
 
-  /* line 252, ../sass/_yellowgrid-builder.scss */
   .lap--push--2_5 {
     position: relative;
     left: 40%;
   }
 
-  /* line 252, ../sass/_yellowgrid-builder.scss */
   .lap--push--2_6 {
     position: relative;
     left: 33.33333%;
   }
 
-  /* line 252, ../sass/_yellowgrid-builder.scss */
   .lap--push--2_7 {
     position: relative;
     left: 28.57143%;
   }
 
-  /* line 252, ../sass/_yellowgrid-builder.scss */
   .lap--push--3_4 {
     position: relative;
     left: 75%;
   }
 
-  /* line 252, ../sass/_yellowgrid-builder.scss */
   .lap--push--3_5 {
     position: relative;
     left: 60%;
   }
 
-  /* line 252, ../sass/_yellowgrid-builder.scss */
   .lap--push--3_6 {
     position: relative;
     left: 50%;
   }
 
-  /* line 252, ../sass/_yellowgrid-builder.scss */
   .lap--push--3_7 {
     position: relative;
     left: 42.85714%;
   }
 
-  /* line 252, ../sass/_yellowgrid-builder.scss */
   .lap--push--4_5 {
     position: relative;
     left: 80%;
   }
 
-  /* line 252, ../sass/_yellowgrid-builder.scss */
   .lap--push--4_6 {
     position: relative;
     left: 66.66667%;
   }
 
-  /* line 252, ../sass/_yellowgrid-builder.scss */
   .lap--push--4_7 {
     position: relative;
     left: 57.14286%;
   }
 
-  /* line 252, ../sass/_yellowgrid-builder.scss */
   .lap--push--5_6 {
     position: relative;
     left: 83.33333%;
   }
 
-  /* line 252, ../sass/_yellowgrid-builder.scss */
   .lap--push--5_7 {
     position: relative;
     left: 71.42857%;
   }
 
-  /* line 252, ../sass/_yellowgrid-builder.scss */
   .lap--push--6_7 {
     position: relative;
     left: 85.71429%;
   }
 
-  /* line 286, ../sass/_yellowgrid-builder.scss */
   .lap--1_2--centered {
     position: relative;
     left: 25%;
   }
 
-  /* line 286, ../sass/_yellowgrid-builder.scss */
   .lap--1_3--centered {
     position: relative;
     left: 33.33333%;
   }
 
-  /* line 286, ../sass/_yellowgrid-builder.scss */
   .lap--1_4--centered {
     position: relative;
     left: 37.5%;
   }
 
-  /* line 286, ../sass/_yellowgrid-builder.scss */
   .lap--1_5--centered {
     position: relative;
     left: 40%;
   }
 
-  /* line 286, ../sass/_yellowgrid-builder.scss */
   .lap--1_6--centered {
     position: relative;
     left: 41.66667%;
   }
 
-  /* line 286, ../sass/_yellowgrid-builder.scss */
   .lap--1_7--centered {
     position: relative;
     left: 42.85714%;
   }
 
-  /* line 286, ../sass/_yellowgrid-builder.scss */
   .lap--2_3--centered {
     position: relative;
     left: 16.66667%;
   }
 
-  /* line 286, ../sass/_yellowgrid-builder.scss */
   .lap--2_4--centered {
     position: relative;
     left: 25%;
   }
 
-  /* line 286, ../sass/_yellowgrid-builder.scss */
   .lap--2_5--centered {
     position: relative;
     left: 30%;
   }
 
-  /* line 286, ../sass/_yellowgrid-builder.scss */
   .lap--2_6--centered {
     position: relative;
     left: 33.33333%;
   }
 
-  /* line 286, ../sass/_yellowgrid-builder.scss */
   .lap--2_7--centered {
     position: relative;
     left: 35.71429%;
   }
 
-  /* line 286, ../sass/_yellowgrid-builder.scss */
   .lap--3_4--centered {
     position: relative;
     left: 12.5%;
   }
 
-  /* line 286, ../sass/_yellowgrid-builder.scss */
   .lap--3_5--centered {
     position: relative;
     left: 20%;
   }
 
-  /* line 286, ../sass/_yellowgrid-builder.scss */
   .lap--3_6--centered {
     position: relative;
     left: 25%;
   }
 
-  /* line 286, ../sass/_yellowgrid-builder.scss */
   .lap--3_7--centered {
     position: relative;
     left: 28.57143%;
   }
 
-  /* line 286, ../sass/_yellowgrid-builder.scss */
   .lap--4_5--centered {
     position: relative;
     left: 10.0%;
   }
 
-  /* line 286, ../sass/_yellowgrid-builder.scss */
   .lap--4_6--centered {
     position: relative;
     left: 16.66667%;
   }
 
-  /* line 286, ../sass/_yellowgrid-builder.scss */
   .lap--4_7--centered {
     position: relative;
     left: 21.42857%;
   }
 
-  /* line 286, ../sass/_yellowgrid-builder.scss */
   .lap--5_6--centered {
     position: relative;
     left: 8.33333%;
   }
 
-  /* line 286, ../sass/_yellowgrid-builder.scss */
   .lap--5_7--centered {
     position: relative;
     left: 14.28571%;
   }
 
-  /* line 286, ../sass/_yellowgrid-builder.scss */
   .lap--6_7--centered {
     position: relative;
     left: 7.14286%;
   }
 
-  /* line 300, ../sass/_yellowgrid-builder.scss */
   .lap--hidden {
     display: none;
   }
 
-  /* line 303, ../sass/_yellowgrid-builder.scss */
   .lap--visible {
     display: block;
   }
 }
 @media only screen and (min-width: 979px) {
-  /* line 118, ../sass/_yellowgrid-builder.scss */
   .desk,
   .desk--1,
   .desk--full {
     width: 100%;
   }
 
-  /* line 131, ../sass/_yellowgrid-builder.scss */
   .desk--1_2 {
     width: 50%;
   }
 
-  /* line 131, ../sass/_yellowgrid-builder.scss */
   .desk--1_3 {
     width: 33.33333%;
   }
 
-  /* line 131, ../sass/_yellowgrid-builder.scss */
   .desk--1_4 {
     width: 25%;
   }
 
-  /* line 131, ../sass/_yellowgrid-builder.scss */
   .desk--1_5 {
     width: 20%;
   }
 
-  /* line 131, ../sass/_yellowgrid-builder.scss */
   .desk--1_6 {
     width: 16.66667%;
   }
 
-  /* line 131, ../sass/_yellowgrid-builder.scss */
   .desk--1_7 {
     width: 14.28571%;
   }
 
-  /* line 131, ../sass/_yellowgrid-builder.scss */
   .desk--2_3 {
     width: 66.66667%;
   }
 
-  /* line 131, ../sass/_yellowgrid-builder.scss */
   .desk--2_4 {
     width: 50%;
   }
 
-  /* line 131, ../sass/_yellowgrid-builder.scss */
   .desk--2_5 {
     width: 40%;
   }
 
-  /* line 131, ../sass/_yellowgrid-builder.scss */
   .desk--2_6 {
     width: 33.33333%;
   }
 
-  /* line 131, ../sass/_yellowgrid-builder.scss */
   .desk--2_7 {
     width: 28.57143%;
   }
 
-  /* line 131, ../sass/_yellowgrid-builder.scss */
   .desk--3_4 {
     width: 75%;
   }
 
-  /* line 131, ../sass/_yellowgrid-builder.scss */
   .desk--3_5 {
     width: 60%;
   }
 
-  /* line 131, ../sass/_yellowgrid-builder.scss */
   .desk--3_6 {
     width: 50%;
   }
 
-  /* line 131, ../sass/_yellowgrid-builder.scss */
   .desk--3_7 {
     width: 42.85714%;
   }
 
-  /* line 131, ../sass/_yellowgrid-builder.scss */
   .desk--4_5 {
     width: 80%;
   }
 
-  /* line 131, ../sass/_yellowgrid-builder.scss */
   .desk--4_6 {
     width: 66.66667%;
   }
 
-  /* line 131, ../sass/_yellowgrid-builder.scss */
   .desk--4_7 {
     width: 57.14286%;
   }
 
-  /* line 131, ../sass/_yellowgrid-builder.scss */
   .desk--5_6 {
     width: 83.33333%;
   }
 
-  /* line 131, ../sass/_yellowgrid-builder.scss */
   .desk--5_7 {
     width: 71.42857%;
   }
 
-  /* line 131, ../sass/_yellowgrid-builder.scss */
   .desk--6_7 {
     width: 85.71429%;
   }
 
-  /* line 159, ../sass/_yellowgrid-builder.scss */
   .grid--set--desk--1_2 .grid__col {
     width: 50%;
   }
 
-  /* line 159, ../sass/_yellowgrid-builder.scss */
   .grid--set--desk--1_3 .grid__col {
     width: 33.33333%;
   }
 
-  /* line 159, ../sass/_yellowgrid-builder.scss */
   .grid--set--desk--1_4 .grid__col {
     width: 25%;
   }
 
-  /* line 159, ../sass/_yellowgrid-builder.scss */
   .grid--set--desk--1_5 .grid__col {
     width: 20%;
   }
 
-  /* line 159, ../sass/_yellowgrid-builder.scss */
   .grid--set--desk--1_6 .grid__col {
     width: 16.66667%;
   }
 
-  /* line 159, ../sass/_yellowgrid-builder.scss */
   .grid--set--desk--1_7 .grid__col {
     width: 14.28571%;
   }
 
-  /* line 210, ../sass/_yellowgrid-builder.scss */
   .grid--set--desk--1_2 .grid__col:nth-child(2n+1) {
     clear: both;
   }
 
-  /* line 197, ../sass/_yellowgrid-builder.scss */
+  .desk--1_2:nth-child(2n+1) {
+    clear: both;
+  }
+
   .grid--set--desk--1_3 .grid__col:nth-child(2n+1) {
     clear: none;
   }
 
-  /* line 210, ../sass/_yellowgrid-builder.scss */
+  .desk--1_3:nth-child(2n+1) {
+    clear: none;
+  }
+
   .grid--set--desk--1_3 .grid__col:nth-child(3n+1) {
     clear: both;
   }
 
-  /* line 197, ../sass/_yellowgrid-builder.scss */
+  .desk--1_3:nth-child(3n+1) {
+    clear: both;
+  }
+
   .grid--set--desk--1_4 .grid__col:nth-child(3n+1) {
     clear: none;
   }
 
-  /* line 197, ../sass/_yellowgrid-builder.scss */
+  .desk--1_4:nth-child(3n+1) {
+    clear: none;
+  }
+
   .grid--set--desk--1_4 .grid__col:nth-child(2n+1) {
     clear: none;
   }
 
-  /* line 210, ../sass/_yellowgrid-builder.scss */
+  .desk--1_4:nth-child(2n+1) {
+    clear: none;
+  }
+
   .grid--set--desk--1_4 .grid__col:nth-child(4n+1) {
     clear: both;
   }
 
-  /* line 197, ../sass/_yellowgrid-builder.scss */
+  .desk--1_4:nth-child(4n+1) {
+    clear: both;
+  }
+
   .grid--set--desk--1_5 .grid__col:nth-child(4n+1) {
     clear: none;
   }
 
-  /* line 197, ../sass/_yellowgrid-builder.scss */
+  .desk--1_5:nth-child(4n+1) {
+    clear: none;
+  }
+
   .grid--set--desk--1_5 .grid__col:nth-child(3n+1) {
     clear: none;
   }
 
-  /* line 197, ../sass/_yellowgrid-builder.scss */
+  .desk--1_5:nth-child(3n+1) {
+    clear: none;
+  }
+
   .grid--set--desk--1_5 .grid__col:nth-child(2n+1) {
     clear: none;
   }
 
-  /* line 210, ../sass/_yellowgrid-builder.scss */
+  .desk--1_5:nth-child(2n+1) {
+    clear: none;
+  }
+
   .grid--set--desk--1_5 .grid__col:nth-child(5n+1) {
     clear: both;
   }
 
-  /* line 197, ../sass/_yellowgrid-builder.scss */
+  .desk--1_5:nth-child(5n+1) {
+    clear: both;
+  }
+
   .grid--set--desk--1_6 .grid__col:nth-child(5n+1) {
     clear: none;
   }
 
-  /* line 197, ../sass/_yellowgrid-builder.scss */
+  .desk--1_6:nth-child(5n+1) {
+    clear: none;
+  }
+
   .grid--set--desk--1_6 .grid__col:nth-child(4n+1) {
     clear: none;
   }
 
-  /* line 197, ../sass/_yellowgrid-builder.scss */
+  .desk--1_6:nth-child(4n+1) {
+    clear: none;
+  }
+
   .grid--set--desk--1_6 .grid__col:nth-child(3n+1) {
     clear: none;
   }
 
-  /* line 197, ../sass/_yellowgrid-builder.scss */
+  .desk--1_6:nth-child(3n+1) {
+    clear: none;
+  }
+
   .grid--set--desk--1_6 .grid__col:nth-child(2n+1) {
     clear: none;
   }
 
-  /* line 210, ../sass/_yellowgrid-builder.scss */
+  .desk--1_6:nth-child(2n+1) {
+    clear: none;
+  }
+
   .grid--set--desk--1_6 .grid__col:nth-child(6n+1) {
     clear: both;
   }
 
-  /* line 197, ../sass/_yellowgrid-builder.scss */
+  .desk--1_6:nth-child(6n+1) {
+    clear: both;
+  }
+
   .grid--set--desk--1_7 .grid__col:nth-child(6n+1) {
     clear: none;
   }
 
-  /* line 197, ../sass/_yellowgrid-builder.scss */
+  .desk--1_7:nth-child(6n+1) {
+    clear: none;
+  }
+
   .grid--set--desk--1_7 .grid__col:nth-child(5n+1) {
     clear: none;
   }
 
-  /* line 197, ../sass/_yellowgrid-builder.scss */
+  .desk--1_7:nth-child(5n+1) {
+    clear: none;
+  }
+
   .grid--set--desk--1_7 .grid__col:nth-child(4n+1) {
     clear: none;
   }
 
-  /* line 197, ../sass/_yellowgrid-builder.scss */
+  .desk--1_7:nth-child(4n+1) {
+    clear: none;
+  }
+
   .grid--set--desk--1_7 .grid__col:nth-child(3n+1) {
     clear: none;
   }
 
-  /* line 197, ../sass/_yellowgrid-builder.scss */
+  .desk--1_7:nth-child(3n+1) {
+    clear: none;
+  }
+
   .grid--set--desk--1_7 .grid__col:nth-child(2n+1) {
     clear: none;
   }
 
-  /* line 210, ../sass/_yellowgrid-builder.scss */
+  .desk--1_7:nth-child(2n+1) {
+    clear: none;
+  }
+
   .grid--set--desk--1_7 .grid__col:nth-child(7n+1) {
     clear: both;
   }
 
-  /* line 240, ../sass/_yellowgrid-builder.scss */
+  .desk--1_7:nth-child(7n+1) {
+    clear: both;
+  }
+
   .desk--push--0,
   .desk--push--none {
     position: static;
     left: 0%;
   }
 
-  /* line 252, ../sass/_yellowgrid-builder.scss */
   .desk--push--1_2 {
     position: relative;
     left: 50%;
   }
 
-  /* line 252, ../sass/_yellowgrid-builder.scss */
   .desk--push--1_3 {
     position: relative;
     left: 33.33333%;
   }
 
-  /* line 252, ../sass/_yellowgrid-builder.scss */
   .desk--push--1_4 {
     position: relative;
     left: 25%;
   }
 
-  /* line 252, ../sass/_yellowgrid-builder.scss */
   .desk--push--1_5 {
     position: relative;
     left: 20%;
   }
 
-  /* line 252, ../sass/_yellowgrid-builder.scss */
   .desk--push--1_6 {
     position: relative;
     left: 16.66667%;
   }
 
-  /* line 252, ../sass/_yellowgrid-builder.scss */
   .desk--push--1_7 {
     position: relative;
     left: 14.28571%;
   }
 
-  /* line 252, ../sass/_yellowgrid-builder.scss */
   .desk--push--2_3 {
     position: relative;
     left: 66.66667%;
   }
 
-  /* line 252, ../sass/_yellowgrid-builder.scss */
   .desk--push--2_4 {
     position: relative;
     left: 50%;
   }
 
-  /* line 252, ../sass/_yellowgrid-builder.scss */
   .desk--push--2_5 {
     position: relative;
     left: 40%;
   }
 
-  /* line 252, ../sass/_yellowgrid-builder.scss */
   .desk--push--2_6 {
     position: relative;
     left: 33.33333%;
   }
 
-  /* line 252, ../sass/_yellowgrid-builder.scss */
   .desk--push--2_7 {
     position: relative;
     left: 28.57143%;
   }
 
-  /* line 252, ../sass/_yellowgrid-builder.scss */
   .desk--push--3_4 {
     position: relative;
     left: 75%;
   }
 
-  /* line 252, ../sass/_yellowgrid-builder.scss */
   .desk--push--3_5 {
     position: relative;
     left: 60%;
   }
 
-  /* line 252, ../sass/_yellowgrid-builder.scss */
   .desk--push--3_6 {
     position: relative;
     left: 50%;
   }
 
-  /* line 252, ../sass/_yellowgrid-builder.scss */
   .desk--push--3_7 {
     position: relative;
     left: 42.85714%;
   }
 
-  /* line 252, ../sass/_yellowgrid-builder.scss */
   .desk--push--4_5 {
     position: relative;
     left: 80%;
   }
 
-  /* line 252, ../sass/_yellowgrid-builder.scss */
   .desk--push--4_6 {
     position: relative;
     left: 66.66667%;
   }
 
-  /* line 252, ../sass/_yellowgrid-builder.scss */
   .desk--push--4_7 {
     position: relative;
     left: 57.14286%;
   }
 
-  /* line 252, ../sass/_yellowgrid-builder.scss */
   .desk--push--5_6 {
     position: relative;
     left: 83.33333%;
   }
 
-  /* line 252, ../sass/_yellowgrid-builder.scss */
   .desk--push--5_7 {
     position: relative;
     left: 71.42857%;
   }
 
-  /* line 252, ../sass/_yellowgrid-builder.scss */
   .desk--push--6_7 {
     position: relative;
     left: 85.71429%;
   }
 
-  /* line 286, ../sass/_yellowgrid-builder.scss */
   .desk--1_2--centered {
     position: relative;
     left: 25%;
   }
 
-  /* line 286, ../sass/_yellowgrid-builder.scss */
   .desk--1_3--centered {
     position: relative;
     left: 33.33333%;
   }
 
-  /* line 286, ../sass/_yellowgrid-builder.scss */
   .desk--1_4--centered {
     position: relative;
     left: 37.5%;
   }
 
-  /* line 286, ../sass/_yellowgrid-builder.scss */
   .desk--1_5--centered {
     position: relative;
     left: 40%;
   }
 
-  /* line 286, ../sass/_yellowgrid-builder.scss */
   .desk--1_6--centered {
     position: relative;
     left: 41.66667%;
   }
 
-  /* line 286, ../sass/_yellowgrid-builder.scss */
   .desk--1_7--centered {
     position: relative;
     left: 42.85714%;
   }
 
-  /* line 286, ../sass/_yellowgrid-builder.scss */
   .desk--2_3--centered {
     position: relative;
     left: 16.66667%;
   }
 
-  /* line 286, ../sass/_yellowgrid-builder.scss */
   .desk--2_4--centered {
     position: relative;
     left: 25%;
   }
 
-  /* line 286, ../sass/_yellowgrid-builder.scss */
   .desk--2_5--centered {
     position: relative;
     left: 30%;
   }
 
-  /* line 286, ../sass/_yellowgrid-builder.scss */
   .desk--2_6--centered {
     position: relative;
     left: 33.33333%;
   }
 
-  /* line 286, ../sass/_yellowgrid-builder.scss */
   .desk--2_7--centered {
     position: relative;
     left: 35.71429%;
   }
 
-  /* line 286, ../sass/_yellowgrid-builder.scss */
   .desk--3_4--centered {
     position: relative;
     left: 12.5%;
   }
 
-  /* line 286, ../sass/_yellowgrid-builder.scss */
   .desk--3_5--centered {
     position: relative;
     left: 20%;
   }
 
-  /* line 286, ../sass/_yellowgrid-builder.scss */
   .desk--3_6--centered {
     position: relative;
     left: 25%;
   }
 
-  /* line 286, ../sass/_yellowgrid-builder.scss */
   .desk--3_7--centered {
     position: relative;
     left: 28.57143%;
   }
 
-  /* line 286, ../sass/_yellowgrid-builder.scss */
   .desk--4_5--centered {
     position: relative;
     left: 10.0%;
   }
 
-  /* line 286, ../sass/_yellowgrid-builder.scss */
   .desk--4_6--centered {
     position: relative;
     left: 16.66667%;
   }
 
-  /* line 286, ../sass/_yellowgrid-builder.scss */
   .desk--4_7--centered {
     position: relative;
     left: 21.42857%;
   }
 
-  /* line 286, ../sass/_yellowgrid-builder.scss */
   .desk--5_6--centered {
     position: relative;
     left: 8.33333%;
   }
 
-  /* line 286, ../sass/_yellowgrid-builder.scss */
   .desk--5_7--centered {
     position: relative;
     left: 14.28571%;
   }
 
-  /* line 286, ../sass/_yellowgrid-builder.scss */
   .desk--6_7--centered {
     position: relative;
     left: 7.14286%;
   }
 
-  /* line 300, ../sass/_yellowgrid-builder.scss */
   .desk--hidden {
     display: none;
   }
 
-  /* line 303, ../sass/_yellowgrid-builder.scss */
   .desk--visible {
     display: block;
   }
 }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,6 +1,6 @@
 # Yellowgrid
 
-v 1.0.0
+v 1.0.1
 
 ### A mobile-first, responsive, proportional, BEM style, SCSS grid, with unlimited breakpoints and columns.
 
@@ -146,3 +146,6 @@ h1 {
     }
 }
 ```
+
+## Compile example
+`sass style.scss ../css/style.css --style expanded`
