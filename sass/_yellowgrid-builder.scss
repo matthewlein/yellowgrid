@@ -198,6 +198,9 @@
                             clear: none;
                         }
                     }
+                    .#{$namespace}--1_#{$i}:nth-child(#{$count - 1}n+1) {
+                        clear: none;
+                    }
 
                   $count: $count - 1;
 
@@ -211,6 +214,10 @@
                             clear: both;
                         }
                     }
+                    .#{$namespace}--1_#{$i}:nth-child(#{$i}n+1) {
+                        clear: both;
+                    }
+
 
                 }
 
